@@ -6,7 +6,9 @@
 <p>body</p>
 <span><%= book.body %></span>
 <tr>
-  <td><%= link_to 'show', booklist_path(book.id) %></td>
+  <td><%= link_to 'Show', booklist_path(book.id) %></td>
+  <td><%= link_to 'Edit', edit_booklist_path(book.id) %></td>
+  <td><%= link_to 'Destroy', destroy_booklist_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
 </tr>
 
 <% end %>
