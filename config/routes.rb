@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'booklists/:id/edit' => 'booklists#edit', as: 'edit_booklist'
   patch 'booklists/:id' => 'booklists#update', as: 'update_booklist'
   delete 'booklists/:id' => 'booklists#destroy', as: 'destroy_booklist'
+  
 end

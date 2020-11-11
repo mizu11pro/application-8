@@ -1,5 +1,9 @@
 class BooklistsController < ApplicationController
 
+  def new
+   @book = Book.new
+  end
+
   def create
     book = Book.new(book_params)
     book.save
@@ -8,7 +12,6 @@ class BooklistsController < ApplicationController
 
   def index
     @books = Book.all
-    @book = Book.new
   end
 
   def show
@@ -33,6 +36,6 @@ class BooklistsController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(:title, :body)
+    params.permit(:title, :body)
   end
 end
