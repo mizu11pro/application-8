@@ -28,8 +28,6 @@ body{
   margin:33px;
   font-size:13px;
   line-height:18px;
-
-  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 .list-text{
@@ -57,7 +55,7 @@ label{
 }
 
 
-p{
+p, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -70,4 +68,24 @@ p{
 .flash{
   margin:33px;
   color:green;
+}
+
+.error_pranation{
+  width:450px;
+  border:2px solid red;
+  padding:7px;
+  padding-bottom:0;
+  margin-bottom:20px;
+  background-color:#f0f0f0;
+}
+
+.error-text{
+  text-align:left;
+  font-weight:bold;
+  padding:5px 5px 5px 15px;
+  font-size:12px;
+  margin:-7px;
+  margin-bottom:0;
+  background-color:#c00;
+  color:#fff;
 }

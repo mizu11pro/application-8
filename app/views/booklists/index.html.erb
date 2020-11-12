@@ -29,7 +29,9 @@
 </table>
 
 <!--<form class="new_book">-->
+
 <h2>New Book</h2>
+<%= render 'error_messages', book: @book %>
 
 <%= form_with model: @book, method: :post, local:true do |f| %>
 <div class="field">
