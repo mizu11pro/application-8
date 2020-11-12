@@ -5,16 +5,23 @@ class BooklistsController < ApplicationController
   end
 
   def create
-    book = Book.new(book_params)
-    book.save
-    redirect_to booklist_path(book.id)
+    @book = Book.new(book_params)
+    if @book.save
+    flash[:notice] = "Book was successfully created."
+    redirect_to booklist_path(@book)
+    else
+    render("books/index")
+    end
   end
+
 
   def index
     @books = Book.all
   end
 
   def show
+    # /books/:id
+    # /books/1000
     @book = Book.find(params[:id])
   end
 
@@ -30,8 +37,10 @@ class BooklistsController < ApplicationController
 
   def destroy
     book = Book.find(params[:id])
-    book.destroy
-    redirect_to booklists_path, notice: '投稿されました'
+    if book.destroy
+      flash[:notice] = "Book was successfully destroyed."
+    redirect_to books_path
+    end
   end
 
   private

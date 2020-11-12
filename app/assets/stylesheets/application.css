@@ -66,3 +66,8 @@ p{
 .visited{
   color:#666;
 }
+
+.flash{
+  margin:33px;
+  color:green;
+}

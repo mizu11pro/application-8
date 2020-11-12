@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+<div class="flash">
+ <%= flash[:notice] %>
+ </div>
+ <% end %>
+
 <p>
 <strong>Title:</strong>
 <%= @book.title %>
@@ -12,5 +18,5 @@
 <div class="visited">
 <%= link_to 'Edit', edit_booklist_path(@book.id) %>
 |
-<%= link_to 'Back', booklists_path %>
+<%= link_to 'Back', books_path %>
 </div>

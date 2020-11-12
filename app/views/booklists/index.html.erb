@@ -1,5 +1,10 @@
+<% if flash[:notice] %>
+<div class="flash">
+ <%= flash[:notice] %>
+ </div>
+ <% end %>
+
 <table>
-    <p id="notice"></p>
   <h1 class="head">Books</h1>
 
   <thead>
