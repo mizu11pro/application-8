@@ -20,9 +20,9 @@
 <tr class="list">
   <td class="list-text"><%= book.title %></td>
   <td class="list-text"><%= book.body %></td>
-  <td class="list-text"><%= link_to 'Show', booklist_path(book.id) %></td>
-  <td class="list-text"><%= link_to 'Edit', edit_booklist_path(book.id) %></td>
-  <td class="list-text"><%= link_to 'Destroy', destroy_booklist_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
+  <td class="list-text"><%= link_to 'Show', book_path(book.id) %></td>
+  <td class="list-text"><%= link_to 'Edit', edit_book_path(book.id) %></td>
+  <td class="list-text"><%= link_to 'Destroy', book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %></td>
 </tr>
 <% end %>
 </tbody>
@@ -48,4 +48,3 @@
 <%= f.submit 'Create Book' %>
 </div>
 <% end %>
-<!--</form>-->
